@@ -2,8 +2,7 @@ import React, { useState } from 'react'
 import '../styles/style.css'
 
 function App() {
-
-  //Запрашиваем данные
+  //Новый заголовок
   let newText
   let text
 
@@ -12,7 +11,7 @@ function App() {
     newText = prompt('New text');
     text.innerHTML = newText
   }
-
+  //Запрашиваем данные
   function User(name, age, isHappy) {
     return {
       name,
