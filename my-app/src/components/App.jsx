@@ -12,7 +12,7 @@ const App = () => {
     text.innerHTML = newText
   }
   //Запрашиваем данные
-  let cloneUser
+  let cloneUser;
 
   let data = () => {
 
