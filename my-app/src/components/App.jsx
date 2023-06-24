@@ -12,7 +12,6 @@ const App = () => {
     text.innerHTML = newText
   }
   //Запрашиваем данные
-  let headName
 
   let data = () => {
 
@@ -28,10 +27,7 @@ const App = () => {
 
     let cloneUser = new User(getName, getAge)
 
-    headName = document.querySelector('.headName');
-    headName.innerHTML = getName
-
-    console.log(cloneUser);
+        console.log(cloneUser);
   }
   //Инкремент и декремент
 
@@ -59,10 +55,9 @@ const App = () => {
   return (
     <div className="App">
       <button onClick={headText}>New Text</button>
-            <h1 className='text'>{newText}</h1>
+      <h1 className='text'>{newText}</h1>
       <br /><br />
       <button onClick={data}>Data</button>
-      <h1 className='headName'>{}</h1>
       <br /><br />
       <button onClick={increment}>Increment</button>
       <button onClick={decrement}>Decrement</button>
