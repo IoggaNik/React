@@ -1,36 +1,38 @@
 import React, { useState } from 'react'
 import '../styles/style.css'
 
-function App() {
+const App = () => {
   //Новый заголовок
   let newText
   let text
 
-  function headText() {
+  let headText = () => {
     text = document.querySelector('.text')
     newText = prompt('New text');
     text.innerHTML = newText
   }
   //Запрашиваем данные
-  function User(name, age, isHappy) {
-    return {
-      name,
-      age,
-      isHappy
+  let headName
+
+  let data = () => {
+
+    function User(name, age) {
+      return {
+        name: name,
+        age: age
+      }
     }
+
+    let getName = prompt('Name?')
+    let getAge = prompt('Age?')
+
+    let cloneUser = new User(getName, getAge)
+
+    headName = document.querySelector('.headName');
+    headName.innerHTML = getName
+
+    console.log(cloneUser);
   }
-
-  let newData = () => {
-    getName = prompt('Name?')
-    getAge = +prompt('Age?')
-    getHappy = prompt('He is happy?')
-  }
-
-  let getName
-  let getAge
-  let getHappy
-
-  let cloneUser = new User(getName, getAge, getHappy)
   //Инкремент и декремент
 
   let [click, setClick] = useState(0)
@@ -59,8 +61,8 @@ function App() {
       <button onClick={headText}>New Text</button>
             <h1 className='text'>{newText}</h1>
       <br /><br />
-      <button onClick={newData}>Data</button>
-      <button onClick={() => {console.log(cloneUser);}}>Console user</button>
+      <button onClick={data}>Data</button>
+      <h1 className='headName'>{}</h1>
       <br /><br />
       <button onClick={increment}>Increment</button>
       <button onClick={decrement}>Decrement</button>
