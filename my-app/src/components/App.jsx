@@ -12,6 +12,7 @@ const App = () => {
     text.innerHTML = newText
   }
   //Запрашиваем данные
+  let cloneUser
 
   let data = () => {
 
@@ -25,9 +26,7 @@ const App = () => {
     let getName = prompt('Name?')
     let getAge = prompt('Age?')
 
-    let cloneUser = new User(getName, getAge)
-
-        console.log(cloneUser);
+    cloneUser = new User(getName, getAge)
   }
   //Инкремент и декремент
 
@@ -58,6 +57,7 @@ const App = () => {
       <h1 className='text'>{newText}</h1>
       <br /><br />
       <button onClick={data}>Data</button>
+      <button onClick={() => {console.log(cloneUser);}}>Data console</button>
       <br /><br />
       <button onClick={increment}>Increment</button>
       <button onClick={decrement}>Decrement</button>
