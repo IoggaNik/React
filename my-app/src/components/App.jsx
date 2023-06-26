@@ -24,7 +24,11 @@ const App = () => {
     }
 
     let getName = prompt('Name?')
-    let getAge = prompt('Age?')
+    let getAge = +prompt('Age?')
+
+    if (typeof getAge !== 'number') {
+      getAge = null
+    }
 
     cloneUser = new User(getName, getAge)
   }
