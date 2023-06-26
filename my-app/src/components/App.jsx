@@ -1,13 +1,12 @@
 import React from "react"
 import '../styles/style.css'
 import Header from "./Header"
-import SidePanel from "./SidePanel"
 
 const App = () => {
   return (
     <div>
-      <Header />
-      <SidePanel />
+      <Header title='Name' />
+      <Header title='Wow!' />
     </div>
   )
 }
